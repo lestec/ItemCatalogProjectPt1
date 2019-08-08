@@ -1,0 +1,24 @@
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+  </head>
+  <body>
+   
+    <header>
+     
+      <h1 class="inline"><a href = "{{url_for('showCatalog')}}" style="color:black">
+        Children Events Catalog</a>
+      </h1>
+    </header>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flash">
+      {% for message in messages %}
+      <h2><strong>{{message}}</strong></h2>
+      {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %} -->
