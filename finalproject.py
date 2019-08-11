@@ -18,19 +18,6 @@ session = DBSession()
 @app.route('/catalog/')
 def showCatalog():
     categories = session.query(Categories).order_by(asc(Categories.name))
-#adding below to see what is wrong
-    #when using categories below getting an error categories_id can't find
-
-    #categories = session.query(Categories).filter_by(categories_id = categories_id).one()
-    #items = session.query(CategoryItem).filter_by(categories_id = categories_id)
-    #output = ''
-    #for i in items:
-    #	output += i.name
-    #	output += '</br>'
-    #	output += i.description
-    #	output += '</br>'
-    #	output += '</br>'
-    #return output	
     # should show all catagories
     return render_template('catalog.html', categories=categories)
     #return "this page will show all my venues"
